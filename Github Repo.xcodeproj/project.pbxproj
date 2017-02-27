@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C86940BB1E64BA2100386EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86940BA1E64BA2100386EDE /* AppDelegate.swift */; };
-		C86940BD1E64BA2100386EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86940BC1E64BA2100386EDE /* ViewController.swift */; };
-		C86940C01E64BA2100386EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86940BE1E64BA2100386EDE /* Main.storyboard */; };
 		C86940C21E64BA2100386EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86940C11E64BA2100386EDE /* Assets.xcassets */; };
 		C86940C51E64BA2100386EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86940C31E64BA2100386EDE /* LaunchScreen.storyboard */; };
 		C86940D01E64BA2100386EDE /* Github_RepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86940CF1E64BA2100386EDE /* Github_RepoTests.swift */; };
+		C86940DD1E64BBF000386EDE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86940DC1E64BBF000386EDE /* Login.storyboard */; };
+		C86940DF1E64BBFD00386EDE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86940DE1E64BBFD00386EDE /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 /* Begin PBXFileReference section */
 		C86940B71E64BA2100386EDE /* Github Repo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Repo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86940BA1E64BA2100386EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C86940BC1E64BA2100386EDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C86940BF1E64BA2100386EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C86940C11E64BA2100386EDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C86940C41E64BA2100386EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C86940C61E64BA2100386EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86940CB1E64BA2100386EDE /* Github RepoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github RepoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86940CF1E64BA2100386EDE /* Github_RepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_RepoTests.swift; sourceTree = "<group>"; };
 		C86940D11E64BA2100386EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86940DC1E64BBF000386EDE /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C86940DE1E64BBFD00386EDE /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +77,11 @@
 		C86940B91E64BA2100386EDE /* Github Repo */ = {
 			isa = PBXGroup;
 			children = (
-				C86940BA1E64BA2100386EDE /* AppDelegate.swift */,
-				C86940BC1E64BA2100386EDE /* ViewController.swift */,
-				C86940BE1E64BA2100386EDE /* Main.storyboard */,
-				C86940C11E64BA2100386EDE /* Assets.xcassets */,
+				C86940E21E64C15500386EDE /* ViewModels */,
+				C86940E11E64C14300386EDE /* Models */,
+				C86940DA1E64BBA200386EDE /* Controller */,
 				C86940C31E64BA2100386EDE /* LaunchScreen.storyboard */,
-				C86940C61E64BA2100386EDE /* Info.plist */,
+				C86940E01E64C10F00386EDE /* Resources */,
 			);
 			path = "Github Repo";
 			sourceTree = "<group>";
@@ -94,6 +93,47 @@
 				C86940D11E64BA2100386EDE /* Info.plist */,
 			);
 			path = "Github RepoTests";
+			sourceTree = "<group>";
+		};
+		C86940DA1E64BBA200386EDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C86940DB1E64BBE400386EDE /* Login */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C86940DB1E64BBE400386EDE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C86940DC1E64BBF000386EDE /* Login.storyboard */,
+				C86940DE1E64BBFD00386EDE /* LoginVC.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C86940E01E64C10F00386EDE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C86940BA1E64BA2100386EDE /* AppDelegate.swift */,
+				C86940C11E64BA2100386EDE /* Assets.xcassets */,
+				C86940C61E64BA2100386EDE /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C86940E11E64C14300386EDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C86940E21E64C15500386EDE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +221,7 @@
 			files = (
 				C86940C51E64BA2100386EDE /* LaunchScreen.storyboard in Resources */,
 				C86940C21E64BA2100386EDE /* Assets.xcassets in Resources */,
-				C86940C01E64BA2100386EDE /* Main.storyboard in Resources */,
+				C86940DD1E64BBF000386EDE /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C86940BD1E64BA2100386EDE /* ViewController.swift in Sources */,
+				C86940DF1E64BBFD00386EDE /* LoginVC.swift in Sources */,
 				C86940BB1E64BA2100386EDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,14 +263,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C86940BE1E64BA2100386EDE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C86940BF1E64BA2100386EDE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C86940C31E64BA2100386EDE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
